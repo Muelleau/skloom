@@ -16,9 +16,11 @@ class WaitGroup {
 
   @throws[InterruptedException]
   def await(): Unit = {
-    while ({
-      jobs > 0
-    }) wait()
+    synchronized {
+      while ({
+        jobs > 0
+      }) wait()
+    }
   }
 
 }
