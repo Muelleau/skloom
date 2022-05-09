@@ -2,9 +2,9 @@ package io.vigg.skloom
 
 import java.util.concurrent.{ArrayBlockingQueue, BlockingQueue}
 
-trait Channel[T] {
+abstract class Channel[T](capacity: Int) {
 
-  val queue: BlockingQueue[T] = new ArrayBlockingQueue[T](1)
+  val queue: BlockingQueue[T] = new ArrayBlockingQueue[T](capacity)
 
   def put(x: T): Unit = {
     queue.put(x)
@@ -21,12 +21,5 @@ trait Channel[T] {
   def <(): T = {
     queue.poll()
   }
-
-}
-
-trait BufferedChannel[T] {
-
-  val capacity: Int
-  val queue: BlockingQueue[T] = new ArrayBlockingQueue[T](capacity)
 
 }

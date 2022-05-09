@@ -16,8 +16,8 @@ class SkLoomTest {
     implicit val executor: ExecutorService =
       Executors.newVirtualThreadPerTaskExecutor()
 
-    val channel1 = new Channel[String] {}
-    val channel2 = new Channel[String] {}
+    val channel1 = new Channel[String](1) {}
+    val channel2 = new Channel[String](1) {}
 
     channel1.put("a1")
     channel2.put("a2")
