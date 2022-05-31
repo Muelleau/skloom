@@ -1,4 +1,4 @@
-ThisBuild / version := "0.3.0-SNAPSHOT"
+ThisBuild / version := "0.4.0-SNAPSHOT"
 
 ThisBuild / scalaVersion := "2.13.8"
 
@@ -13,13 +13,12 @@ resolvers += Resolver.githubPackages("OWNER")
 lazy val skloom = (project in file("."))
   .settings(
     name := "skloom",
-    version := "0.3.0-SNAPSHOT",
+    version := "0.4.0-SNAPSHOT",
     crossPaths := false,
     libraryDependencies ++= Seq(
       "junit" % "junit" % "4.13.2" % Test,
       "org.scalatest" %% "scalatest" % "3.2.12" % Test,
       "com.novocode" % "junit-interface" % "0.11" % Test,
-      "org.eclipse.jetty" % "jetty-server" % "11.0.9",
-      "com.lihaoyi" %% "requests" % "0.7.0"
+      "org.eclipse.jetty" % "jetty-server" % "11.0.9"
     )
   )
