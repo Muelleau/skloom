@@ -6,11 +6,11 @@ import org.eclipse.jetty.server.handler.AbstractHandler
 
 class LoomServer(port: Int) {
 
-  def start(): Unit = {
+  def start(port: Int): Unit = {
 
     val server = new Server(new VirtualThreadPool)
     val connector = new ServerConnector(server)
-    connector.setPort(8090)
+    connector.setPort(port)
 
     server.setConnectors(Array(connector))
 
