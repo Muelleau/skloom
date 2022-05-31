@@ -1,6 +1,5 @@
 package io.vigg.skloom.server
 
-import jakarta.servlet.http.{HttpServletRequest, HttpServletResponse}
 import org.eclipse.jetty.server.{ Request, Server, ServerConnector }
 import org.eclipse.jetty.server.handler.AbstractHandler
 
