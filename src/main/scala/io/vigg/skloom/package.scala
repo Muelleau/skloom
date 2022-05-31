@@ -7,6 +7,8 @@ package object skloom {
   implicit val executor: ExecutorService =
     Executors.newVirtualThreadPerTaskExecutor()
 
+  def go(cmd: Runnable): Unit = executor.submit(cmd)
+
   def go(f: () => Unit): Future[Unit] =
     executor.submit(() => f())
 

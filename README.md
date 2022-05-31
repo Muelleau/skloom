@@ -10,3 +10,6 @@ This includes Channels, Selectors, and Virtual Threads. The goal is a
 to have an easy to use set of classes that make concurrency in Scala
 as easy to use as its Golang equivalents.
 
+We have included a Virtual Thread based implementation of Jetty server to demonstrate
+usage of the library.
+
