@@ -1,4 +1,4 @@
-ThisBuild / version := "0.1.0-SNAPSHOT"
+ThisBuild / version := "0.3.0-SNAPSHOT"
 
 ThisBuild / scalaVersion := "2.13.8"
 
@@ -13,7 +13,7 @@ resolvers += Resolver.githubPackages("OWNER")
 lazy val skloom = (project in file("."))
   .settings(
     name := "skloom",
-    version := "0.2.0-SNAPSHOT",
+    version := "0.3.0-SNAPSHOT",
     crossPaths := false,
     libraryDependencies ++= Seq(
       "junit" % "junit" % "4.13.2" % Test,
